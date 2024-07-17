@@ -56,7 +56,17 @@ module.exports = {
         type: Sequelize.STRING,
       },
       description: {
+        type: Sequelize.TEXT,
+      },
+      mission_statement: {
+        type: Sequelize.TEXT,
+      },
+      //Contact information
+      headquarters: {
         type: Sequelize.STRING,
+      },
+      phone: {
+        type: Sequelize.BIGINT,
       },
       photo: {
         type: Sequelize.STRING,

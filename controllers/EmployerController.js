@@ -10,8 +10,17 @@ class EmployerController extends BaseController {
 
   // Create employer
   async addEmployer(req, res) {
-    const { firstName, lastName, companyName, email, photo, description } =
-      req.body;
+    const {
+      firstName,
+      lastName,
+      companyName,
+      email,
+      photo,
+      description,
+      missionStatement,
+      headquarters,
+      phone,
+    } = req.body;
     try {
       // Create new employer
       const newEmployer = await this.model.create({
@@ -21,6 +30,9 @@ class EmployerController extends BaseController {
         email: email,
         photo: photo,
         description: description,
+        missionStatement: missionStatement,
+        headquarters: headquarters,
+        phone: phone,
       });
       // Respond with new employer
       return res.json(newEmployer);
@@ -31,8 +43,17 @@ class EmployerController extends BaseController {
 
   // Edit and Update Employer
   async updateEmployer(req, res) {
-    const { firstName, lastName, companyName, email, photo, description } =
-      req.body;
+    const {
+      firstName,
+      lastName,
+      companyName,
+      email,
+      photo,
+      description,
+      missionStatement,
+      headquarters,
+      phone,
+    } = req.body;
     const { employerId } = req.params;
     //if employerID /= in the list of employers, should throw error and not be able to update
 
@@ -53,6 +74,9 @@ class EmployerController extends BaseController {
           email: email,
           photo: photo,
           description: description,
+          missionStatement: missionStatement,
+          headquarters: headquarters,
+          phone: phone,
         },
         {
           where: {

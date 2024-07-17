@@ -39,8 +39,7 @@ const TalentRouter = require("./routers/TalentRouter");
 const BenefitRouter = require("./routers/BenefitRouter");
 const EmployerRouter = require("./routers/EmployerRouter");
 
-//port and express
-const PORT = process.env.PORT;
+//express
 const app = express();
 
 // Enable CORS access to this server
@@ -80,6 +79,6 @@ app.use("/talent", talentRouter);
 app.use("/benefits", benefitRouter);
 app.use("/employer", employerRouter);
 
-app.listen(PORT, () => {
-  console.log(`Express app listening on port ${PORT}!`);
+app.listen(process.env.PORT, () => {
+  console.log(`Express app listening on port ${process.env.PORT}!`);
 });
