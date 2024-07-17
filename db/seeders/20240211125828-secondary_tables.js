@@ -27,6 +27,14 @@ module.exports = {
         objective:
           "Marketing professional with expertise in digital marketing strategies.",
       },
+      {
+        talent_id: 4,
+        location: "Singapore",
+        industry: "Education",
+        title: "Specialist Coding Teacher",
+        objective:
+          "Teaching professional with expertise in teaching primary and pre-primary age groups.",
+      },
     ]);
 
     await queryInterface.bulkInsert("talent_work_experiences", [
@@ -71,6 +79,38 @@ module.exports = {
         end_month: "June",
         end_year: "2022",
       },
+      // talent_id: 4
+      {
+        talent_id: 4,
+        company_name: "Little Coders Academy",
+        position: "Junior Coding Instructor",
+        responsibility:
+          "Taught basic coding principles to primary school students.",
+        start_month: "August",
+        start_year: "2018",
+        end_month: "May",
+        end_year: "2020",
+      },
+      {
+        talent_id: 4,
+        company_name: "Future Innovators School",
+        position: "Senior Coding Instructor",
+        responsibility:
+          "Developed curriculum and taught advanced coding to pre-primary and primary students.",
+        start_month: "June",
+        start_year: "2020",
+        end_month: "July",
+        end_year: "2023",
+      },
+      {
+        talent_id: 4,
+        company_name: "TechKids Learning Center",
+        position: "Coding Workshop Facilitator",
+        responsibility:
+          "Conducted weekend coding workshops and after-school programs.",
+        start_month: "August",
+        start_year: "2023",
+      },
     ]);
 
     await queryInterface.bulkInsert("talent_skill_sets", [
@@ -95,6 +135,27 @@ module.exports = {
       {
         talent_id: 3,
         skill: "Digital Marketing",
+        proficiency_level: "Expert",
+      },
+      // talent_id: 4
+      {
+        talent_id: 4,
+        skill: "Scratch Programming",
+        proficiency_level: "Expert",
+      },
+      {
+        talent_id: 4,
+        skill: "Python",
+        proficiency_level: "Advanced",
+      },
+      {
+        talent_id: 4,
+        skill: "Educational Technology",
+        proficiency_level: "Advanced",
+      },
+      {
+        talent_id: 4,
+        skill: "Curriculum Development",
         proficiency_level: "Expert",
       },
     ]);
@@ -134,6 +195,23 @@ module.exports = {
         field_of_study: "Marketing",
         graduation_month: "April",
         graduation_year: "2022",
+      },
+      // Education for talent_id: 4
+      {
+        talent_id: 4,
+        institution: "National University of Singapore",
+        degree: "Bachelor of Science in Education",
+        field_of_study: "Education",
+        graduation_month: "June",
+        graduation_year: "2017",
+      },
+      {
+        talent_id: 4,
+        institution: "Singapore University of Technology and Design",
+        degree: "Master of Education in Educational Technology",
+        field_of_study: "Educational Technology",
+        graduation_month: "December",
+        graduation_year: "2019",
       },
     ]);
 

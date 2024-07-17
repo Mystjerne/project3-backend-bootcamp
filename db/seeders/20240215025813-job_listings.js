@@ -5,7 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("job_listings", [
       {
-        employer_id: 1,
+        employer_id: 8,
         job_title: "Frontend Developer",
         description: "Building user interfaces for web applications.",
         job_responsibility: "Design and implement user-facing features.",
@@ -32,7 +32,7 @@ module.exports = {
         application_end_date: "2024-03-04",
       },
       {
-        employer_id: 3,
+        employer_id: 7,
         job_title: "Graphic Designer",
         description:
           "Creating visual concepts and designs for various projects.",
@@ -103,7 +103,7 @@ module.exports = {
         application_end_date: "2024-03-20",
       },
       {
-        employer_id: 7,
+        employer_id: 9,
         job_title: "Software Tester",
         description: "Ensuring the quality of software through testing.",
         job_responsibility: "Develop and execute test plans and scripts.",
@@ -112,7 +112,7 @@ module.exports = {
         application_end_date: "2024-03-22",
       },
       {
-        employer_id: 8,
+        employer_id: 9,
         job_title: "DevOps Engineer",
         description: "Managing and automating software development processes.",
         job_responsibility: "Implement CI/CD pipelines and monitor systems.",
@@ -238,7 +238,7 @@ module.exports = {
       },
       {
         job_listing_id: 11,
-        benefit_id: 4,
+        benefit_id: 2,
       },
       {
         job_listing_id: 11,
@@ -246,15 +246,15 @@ module.exports = {
       },
       {
         job_listing_id: 12,
-        benefit_id: 3,
+        benefit_id: 1,
       },
       {
         job_listing_id: 12,
-        benefit_id: 6,
+        benefit_id: 2,
       },
       {
         job_listing_id: 12,
-        benefit_id: 9,
+        benefit_id: 4,
       },
     ]);
   },

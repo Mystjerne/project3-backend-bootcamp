@@ -17,7 +17,7 @@ class EmployerController extends BaseController {
       email,
       photo,
       description,
-      mission_statement,
+      missionStatement,
       headquarters,
       phone,
     } = req.body;
@@ -30,7 +30,7 @@ class EmployerController extends BaseController {
         email: email,
         photo: photo,
         description: description,
-        mission_statement: mission_statement,
+        missionStatement: missionStatement,
         headquarters: headquarters,
         phone: phone,
       });
@@ -50,7 +50,7 @@ class EmployerController extends BaseController {
       email,
       photo,
       description,
-      mission_statement,
+      missionStatement,
       headquarters,
       phone,
     } = req.body;
@@ -74,7 +74,7 @@ class EmployerController extends BaseController {
           email: email,
           photo: photo,
           description: description,
-          mission_statement: mission_statement,
+          missionStatement: missionStatement,
           headquarters: headquarters,
           phone: phone,
         },

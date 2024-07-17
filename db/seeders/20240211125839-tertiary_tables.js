@@ -2,6 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
+  //why are there TWO job_listing_benefits tables????
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("job_listing_benefits", [
       {
@@ -30,6 +31,43 @@ module.exports = {
       {
         talent_id: 1,
         benefit_id: 6,
+      },
+      {
+        talent_id: 2,
+        benefit_id: 7,
+      },
+      {
+        talent_id: 2,
+        benefit_id: 3,
+      },
+      {
+        talent_id: 2,
+        benefit_id: 5,
+      },
+      {
+        talent_id: 3,
+        benefit_id: 3,
+      },
+      {
+        talent_id: 3,
+        benefit_id: 2,
+      },
+      {
+        talent_id: 3,
+        benefit_id: 10,
+      },
+      //talent benefits for louis
+      {
+        talent_id: 4,
+        benefit_id: 1,
+      },
+      {
+        talent_id: 4,
+        benefit_id: 2,
+      },
+      {
+        talent_id: 4,
+        benefit_id: 4,
       },
     ]);
 

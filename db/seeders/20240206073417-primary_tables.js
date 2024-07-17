@@ -19,6 +19,11 @@ module.exports = {
         last_name: "Dog",
         email: "bestpetever@text.com",
       },
+      {
+        first_name: "Louis",
+        last_name: "Lee",
+        email: "louis.test.user@gmail.com",
+      },
     ]);
 
     await queryInterface.bulkInsert("employers", [
@@ -118,17 +123,18 @@ module.exports = {
         phone: 4089961010,
         email: "timcook@apple.com",
       },
+      //9th employer.
       {
-        first_name: "Mark",
-        last_name: "Zuckerberg",
-        company_name: "Facebook",
+        first_name: "Thomas",
+        last_name: "Tan",
+        company_name: "Lucid",
         description:
-          "Facebook is a leading social media and technology company that offers online social networking services. It aims to give people the power to build community and bring the world closer together.",
+          "Lucid is a leading social media and technology company that offers online social networking services. It aims to give people the power to build community and bring the world closer together.",
         mission_statement:
           "To give people the power to build community and bring the world closer together.",
         headquarters: "Menlo Park, CA",
         phone: 6505434800,
-        email: "markzuckerberg@facebook.com",
+        email: "thomas.test.employer@gmail.com",
       },
     ]);
 
