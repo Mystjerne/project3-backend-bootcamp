@@ -5,15 +5,6 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("job_listings", [
       {
-        employer_id: 8,
-        job_title: "Frontend Developer",
-        description: "Building user interfaces for web applications.",
-        job_responsibility: "Design and implement user-facing features.",
-        skill_set: "HTML, CSS, JavaScript, React",
-        application_start_date: "2024-02-10",
-        application_end_date: "2024-03-20",
-      },
-      {
         employer_id: 1,
         job_title: "Backend Developer",
         description: "Creating and maintaining server-side logic.",
@@ -99,6 +90,15 @@ module.exports = {
         description: "Managing HR operations and employee relations.",
         job_responsibility: "Oversee recruitment and employee performance.",
         skill_set: "HR management, Recruitment, Employee Relations",
+        application_start_date: "2024-02-10",
+        application_end_date: "2024-03-20",
+      },
+      {
+        employer_id: 8,
+        job_title: "Frontend Developer",
+        description: "Building user interfaces for web applications.",
+        job_responsibility: "Design and implement user-facing features.",
+        skill_set: "HTML, CSS, JavaScript, React",
         application_start_date: "2024-02-10",
         application_end_date: "2024-03-20",
       },
