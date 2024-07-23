@@ -69,20 +69,46 @@ module.exports = {
         talent_id: 4,
         benefit_id: 4,
       },
-    ]);
-
-    await queryInterface.bulkInsert("messages", [
+      //talent benefits for Joseph
       {
-        talent_id: 1,
-        chatroom_id: 1,
-        message: "Hello, I am interested in the job listing.",
+        talent_id: 5,
+        benefit_id: 8,
+      },
+      {
+        talent_id: 5,
+        benefit_id: 7,
+      },
+      {
+        talent_id: 5,
+        benefit_id: 6,
+      },
+      //talent benefits for Klein
+      {
+        talent_id: 6,
+        benefit_id: 5,
+      },
+      {
+        talent_id: 6,
+        benefit_id: 2,
+      },
+      {
+        talent_id: 6,
+        benefit_id: 9,
       },
     ]);
+
+    // await queryInterface.bulkInsert("messages", [
+    //   {
+    //     talent_id: 1,
+    //     chatroom_id: 1,
+    //     message: "Hello, I am interested in the job listing.",
+    //   },
+    // ]);
   },
 
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable("job_listing_benefits");
     await queryInterface.dropTable("talent_benefits");
-    await queryInterface.dropTable("messages");
+    // await queryInterface.dropTable("messages");
   },
 };

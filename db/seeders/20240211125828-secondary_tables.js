@@ -27,6 +27,7 @@ module.exports = {
         objective:
           "Marketing professional with expertise in digital marketing strategies.",
       },
+      //Louis
       {
         talent_id: 4,
         location: "Singapore",
@@ -34,6 +35,24 @@ module.exports = {
         title: "Specialist Coding Teacher",
         objective:
           "Teaching professional with expertise in teaching primary and pre-primary age groups.",
+      },
+      //Joseph
+      {
+        talent_id: 5,
+        location: "Malaysia",
+        industry: "Healthcare",
+        title: "Medical Researcher",
+        objective:
+          "Passionate about advancing medical research and improving patient care.",
+      },
+      //Klein
+      {
+        talent_id: 6,
+        location: "Thailand",
+        industry: "Engineering",
+        title: "Civil Engineer",
+        objective:
+          "Experienced civil engineer seeking opportunities to contribute to infrastructure projects.",
       },
     ]);
 
@@ -111,6 +130,45 @@ module.exports = {
         start_month: "August",
         start_year: "2023",
       },
+      //Joseph
+      {
+        talent_id: 5,
+        company_name: "Global Health Institute",
+        position: "Research Assistant",
+        responsibility: "Assisted in clinical research studies.",
+        start_month: "July",
+        start_year: "2020",
+        end_month: "June",
+        end_year: "2022",
+      },
+      {
+        talent_id: 5,
+        company_name: "MediTech Labs",
+        position: "Research Scientist",
+        responsibility:
+          "Conducted experiments and published research findings.",
+        start_month: "July",
+        start_year: "2022",
+      },
+      // talent_id: 6
+      {
+        talent_id: 6,
+        company_name: "Bangkok Infrastructure Corp.",
+        position: "Site Engineer",
+        responsibility: "Managed on-site construction activities.",
+        start_month: "March",
+        start_year: "2018",
+        end_month: "February",
+        end_year: "2020",
+      },
+      {
+        talent_id: 6,
+        company_name: "Thailand Civil Engineering Ltd.",
+        position: "Project Engineer",
+        responsibility: "Oversaw project planning and execution.",
+        start_month: "March",
+        start_year: "2020",
+      },
     ]);
 
     await queryInterface.bulkInsert("talent_skill_sets", [
@@ -137,7 +195,7 @@ module.exports = {
         skill: "Digital Marketing",
         proficiency_level: "Expert",
       },
-      // talent_id: 4
+      // talent_id: 4, Louis
       {
         talent_id: 4,
         skill: "Scratch Programming",
@@ -157,6 +215,37 @@ module.exports = {
         talent_id: 4,
         skill: "Curriculum Development",
         proficiency_level: "Expert",
+      },
+      //talent_id:5, Joseph
+      {
+        talent_id: 5,
+        skill: "Clinical Research",
+        proficiency_level: "Advanced",
+      },
+      {
+        talent_id: 5,
+        skill: "Data Analysis",
+        proficiency_level: "Advanced",
+      },
+      {
+        talent_id: 5,
+        skill: "Scientific Writing",
+        proficiency_level: "Expert",
+      },
+      {
+        talent_id: 6,
+        skill: "Structural Analysis",
+        proficiency_level: "Expert",
+      },
+      {
+        talent_id: 6,
+        skill: "Project Management",
+        proficiency_level: "Advanced",
+      },
+      {
+        talent_id: 6,
+        skill: "AutoCAD",
+        proficiency_level: "Advanced",
       },
     ]);
 
@@ -213,17 +302,38 @@ module.exports = {
         graduation_month: "December",
         graduation_year: "2019",
       },
-    ]);
-
-    await queryInterface.bulkInsert("job_listings", [
+      //Education for talent_id: 5
       {
-        employer_id: 1,
-        job_title: "Senior Software Engineer",
-        description: "Developing and maintaining web applications.",
-        job_responsibility: "Lead development projects.",
-        skill_set: "JavaScript, React, Node.js",
-        application_start_date: "2024-02-01",
-        application_end_date: "2024-02-15",
+        talent_id: 5,
+        institution: "University of Malaysia",
+        degree: "Bachelor of Science in Biomedical Sciences",
+        field_of_study: "Biomedical Sciences",
+        graduation_month: "May",
+        graduation_year: "2020",
+      },
+      {
+        talent_id: 5,
+        institution: "University of Singapore",
+        degree: "Master of Science in Medical Research",
+        field_of_study: "Medical Research",
+        graduation_month: "August",
+        graduation_year: "2023",
+      },
+      {
+        talent_id: 6,
+        institution: "University of Indonesia",
+        degree: "Bachelor of Science in Civil Engineering",
+        field_of_study: "Civil Engineering",
+        graduation_month: "June",
+        graduation_year: "2018",
+      },
+      {
+        talent_id: 6,
+        institution: "Tech University",
+        degree: "Master of Science in Structural Engineering",
+        field_of_study: "Structural Engineering",
+        graduation_month: "July",
+        graduation_year: "2021",
       },
     ]);
 
@@ -236,15 +346,47 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
       },
-    ]);
-
-    await queryInterface.bulkInsert("chatrooms", [
       {
-        application_id: 1,
+        job_listing_id: 11,
+        talent_id: 5,
+        application_date: new Date(),
+        application_status: "Pending",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        job_listing_id: 12,
+        talent_id: 5,
+        application_date: new Date(),
+        application_status: "Pending",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        job_listing_id: 11,
+        talent_id: 6,
+        application_date: new Date(),
+        application_status: "Pending",
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        job_listing_id: 12,
+        talent_id: 6,
+        application_date: new Date(),
+        application_status: "Pending",
         created_at: new Date(),
         updated_at: new Date(),
       },
     ]);
+
+    // await queryInterface.bulkInsert("chatrooms", [
+    //   {
+    //     application_id: 1,
+    //     created_at: new Date(),
+    //     updated_at: new Date(),
+    //   },
+    // ]);
   },
 
   async down(queryInterface, Sequelize) {
@@ -252,8 +394,7 @@ module.exports = {
     await queryInterface.dropTable("talent_work_experiences");
     await queryInterface.dropTable("talent_skill_sets");
     await queryInterface.dropTable("talent_educations");
-    await queryInterface.dropTable("job_listings");
     await queryInterface.dropTable("applications");
-    await queryInterface.dropTable("chatrooms");
+    // await queryInterface.dropTable("chatrooms");
   },
 };

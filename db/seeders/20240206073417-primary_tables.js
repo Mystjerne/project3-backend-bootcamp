@@ -24,6 +24,16 @@ module.exports = {
         last_name: "Lee",
         email: "louis.test.user@gmail.com",
       },
+      {
+        first_name: "Joseph",
+        last_name: "Walker",
+        email: "josephwalker.test.user@gmail.com",
+      },
+      {
+        first_name: "Klein",
+        last_name: "Toh",
+        email: "kleintoh.test.user@gmail.com",
+      },
     ]);
 
     await queryInterface.bulkInsert("employers", [
